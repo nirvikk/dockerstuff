@@ -1,6 +1,4 @@
-FROM python:alpine3.7
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD python ./index.py
+FROM python:3
+ADD my_script.py /
+RUN pip install pystrich
+CMD [ "python", "./my_script.py" ]
